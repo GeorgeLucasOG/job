@@ -6,16 +6,16 @@ import { setSearchedQuery } from '@/redux/jobSlice'
 
 const fitlerData = [
     {
-        fitlerType: "Location",
-        array: ["Delhi NCR", "Bangalore", "Hyderabad", "Pune", "Mumbai"]
+        fitlerType: "Localização",
+        array: ["Breves", "Portel", "Melgaço", "Bagre", "Anajás", "Curralinho"]
     },
     {
-        fitlerType: "Industry",
+        fitlerType: "Áreas de Atuação",
         array: ["Frontend Developer", "Backend Developer", "FullStack Developer"]
     },
     {
-        fitlerType: "Salary",
-        array: ["0-40k", "42-1lakh", "1lakh to 5lakh"]
+        fitlerType: "Salários",
+        array: ["0-R$2000", "R$2001-R$3000", "R$3001 - Mais de R$5000"]
     },
 ]
 
@@ -30,7 +30,7 @@ const FilterCard = () => {
     },[selectedValue]);
     return (
         <div className='w-full bg-white p-3 rounded-md'>
-            <h1 className='font-bold text-lg'>Filter Jobs</h1>
+            <h1 className='font-bold text-lg'>Filtrar Jobs</h1>
             <hr className='mt-3' />
             <RadioGroup value={selectedValue} onValueChange={changeHandler}>
                 {

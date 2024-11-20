@@ -29,15 +29,15 @@ const ApplicantsTable = () => {
     return (
         <div>
             <Table>
-                <TableCaption>A list of your recent applied user</TableCaption>
+                <TableCaption>Lista de candidatos</TableCaption>
                 <TableHeader>
                     <TableRow>
-                        <TableHead>FullName</TableHead>
-                        <TableHead>Email</TableHead>
-                        <TableHead>Contact</TableHead>
-                        <TableHead>Resume</TableHead>
-                        <TableHead>Date</TableHead>
-                        <TableHead className="text-right">Action</TableHead>
+                        <TableHead>Nome Completo</TableHead>
+                        <TableHead>E-mail</TableHead>
+                        <TableHead>Contatos</TableHead>
+                        <TableHead>Resumo</TableHead>
+                        <TableHead>Data</TableHead>
+                        <TableHead className="text-right">Ação</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>

@@ -18,13 +18,13 @@ const HeroSection = () => {
     return (
         <div className='text-center'>
             <div className='flex flex-col gap-5 my-10'>
-                <span className=' mx-auto px-4 py-2 rounded-full bg-gray-100 text-[#F83002] font-medium'>No. 1 Job Hunt Website</span>
-                <h1 className='text-5xl font-bold'>Search, Apply & <br /> Get Your <span className='text-[#6A38C2]'>Dream Jobs</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur temporibus nihil tempora dolor!</p>
+                <span className=' mx-auto px-4 py-2 rounded-full bg-gray-100 text-[#F83002] font-medium'>O Portal de empregos mais engajado do estado do Pará</span>
+                <h1 className='text-5xl font-bold'>Pesquise, Aplique & <br /> Conquiste seu <span className='text-[#6A38C2]'>Job dos Sonhos</span></h1>
+                <p>O Portal de empregos feito de Marajoaras para Marajoaras com o objetivo de conectar profissionais regionais com oportunidades</p>
                 <div className='flex w-[40%] shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto'>
                     <input
                         type="text"
-                        placeholder='Find your dream jobs'
+                        placeholder='Pesquisar job'
                         onChange={(e) => setQuery(e.target.value)}
                         className='outline-none border-none w-full'
 

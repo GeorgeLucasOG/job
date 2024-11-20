@@ -7,6 +7,7 @@ import { APPLICATION_API_END_POINT, JOB_API_END_POINT } from '@/utils/constant';
 import { setSingleJob } from '@/redux/jobSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'sonner';
+import Navbar from './shared/Navbar'
 
 const JobDescription = () => {
     const {singleJob} = useSelector(store => store.job);
@@ -52,13 +53,14 @@ const JobDescription = () => {
 
     return (
         <div className='max-w-7xl mx-auto my-10'>
+	    <Navbar />
             <div className='flex items-center justify-between'>
                 <div>
                     <h1 className='font-bold text-xl'>{singleJob?.title}</h1>
                     <div className='flex items-center gap-2 mt-4'>
-                        <Badge className={'text-blue-700 font-bold'} variant="ghost">{singleJob?.postion} Positions</Badge>
+                        <Badge className={'text-blue-700 font-bold'} variant="ghost">{singleJob?.position}º no Ranking</Badge>
                         <Badge className={'text-[#F83002] font-bold'} variant="ghost">{singleJob?.jobType}</Badge>
-                        <Badge className={'text-[#7209b7] font-bold'} variant="ghost">{singleJob?.salary}LPA</Badge>
+                        <Badge className={'text-[#7209b7] font-bold'} variant="ghost">R${singleJob?.salary}</Badge>
                     </div>
                 </div>
                 <Button
@@ -68,15 +70,16 @@ const JobDescription = () => {
                     {isApplied ? 'Already Applied' : 'Apply Now'}
                 </Button>
             </div>
-            <h1 className='border-b-2 border-b-gray-300 font-medium py-4'>Job Description</h1>
+            <h1 className='border-b-2 border-b-gray-300 font-medium py-4'>Descrição do Job</h1>
+	  
             <div className='my-4'>
-                <h1 className='font-bold my-1'>Role: <span className='pl-4 font-normal text-gray-800'>{singleJob?.title}</span></h1>
-                <h1 className='font-bold my-1'>Location: <span className='pl-4 font-normal text-gray-800'>{singleJob?.location}</span></h1>
-                <h1 className='font-bold my-1'>Description: <span className='pl-4 font-normal text-gray-800'>{singleJob?.description}</span></h1>
-                <h1 className='font-bold my-1'>Experience: <span className='pl-4 font-normal text-gray-800'>{singleJob?.experience} yrs</span></h1>
-                <h1 className='font-bold my-1'>Salary: <span className='pl-4 font-normal text-gray-800'>{singleJob?.salary}LPA</span></h1>
-                <h1 className='font-bold my-1'>Total Applicants: <span className='pl-4 font-normal text-gray-800'>{singleJob?.applications?.length}</span></h1>
-                <h1 className='font-bold my-1'>Posted Date: <span className='pl-4 font-normal text-gray-800'>{singleJob?.createdAt.split("T")[0]}</span></h1>
+                <h1 className='font-bold my-1'>Cargo: <span className='pl-4 font-normal text-gray-800'>{singleJob?.title}</span></h1>
+                <h1 className='font-bold my-1'>Localização: <span className='pl-4 font-normal text-gray-800'>{singleJob?.location}</span></h1>
+                <h1 className='font-bold my-1'>Descrição: <span className='pl-4 font-normal text-gray-800'>{singleJob?.description}</span></h1>
+                <h1 className='font-bold my-1'>Tempo de Experiência: <span className='pl-4 font-normal text-gray-800'>{singleJob?.experience ? `${singleJob.experience}` : "Opcional"} </span></h1>
+                <h1 className='font-bold my-1'>Salário: <span className='pl-4 font-normal text-gray-800'>R${singleJob?.salary}</span></h1>
+                <h1 className='font-bold my-1'>Total de inscrições: <span className='pl-4 font-normal text-gray-800'>{singleJob?.applications?.length}</span></h1>
+                <h1 className='font-bold my-1'>Data da publicação: <span className='pl-4 font-normal text-gray-800'>{singleJob?.createdAt.split("T")[0]}</span></h1>
             </div>
         </div>
     )

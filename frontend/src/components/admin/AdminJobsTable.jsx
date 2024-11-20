@@ -26,13 +26,13 @@ const AdminJobsTable = () => {
     return (
         <div>
             <Table>
-                <TableCaption>A list of your recent  posted jobs</TableCaption>
+                <TableCaption>List jobs recentemente adicionados</TableCaption>
                 <TableHeader>
                     <TableRow>
-                        <TableHead>Company Name</TableHead>
-                        <TableHead>Role</TableHead>
-                        <TableHead>Date</TableHead>
-                        <TableHead className="text-right">Action</TableHead>
+                        <TableHead>Nome da Instituição</TableHead>
+                        <TableHead>Cargo</TableHead>
+                        <TableHead>Data</TableHead>
+                        <TableHead className="text-right">Acão</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>

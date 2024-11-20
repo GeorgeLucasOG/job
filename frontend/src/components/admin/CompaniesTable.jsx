@@ -23,13 +23,13 @@ const CompaniesTable = () => {
     return (
         <div>
             <Table>
-                <TableCaption>A list of your recent registered companies</TableCaption>
+                <TableCaption>Lista de instituições registradas recentemente</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead>Logo</TableHead>
-                        <TableHead>Name</TableHead>
-                        <TableHead>Date</TableHead>
-                        <TableHead className="text-right">Action</TableHead>
+                        <TableHead>Nome</TableHead>
+                        <TableHead>Data</TableHead>
+                        <TableHead className="text-right">Ação</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -49,7 +49,7 @@ const CompaniesTable = () => {
                                         <PopoverContent className="w-32">
                                             <div onClick={()=> navigate(`/admin/companies/${company._id}`)} className='flex items-center gap-2 w-fit cursor-pointer'>
                                                 <Edit2 className='w-4' />
-                                                <span>Edit</span>
+                                                <span>Editar</span>
                                             </div>
                                         </PopoverContent>
                                     </Popover>

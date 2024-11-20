@@ -66,7 +66,7 @@ const PostJob = () => {
                 <form onSubmit = {submitHandler} className='p-8 max-w-4xl border border-gray-200 shadow-lg rounded-md'>
                     <div className='grid grid-cols-2 gap-2'>
                         <div>
-                            <Label>Title</Label>
+                            <Label>Titulo</Label>
                             <Input
                                 type="text"
                                 name="title"
@@ -76,7 +76,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>Description</Label>
+                            <Label>Descrição</Label>
                             <Input
                                 type="text"
                                 name="description"
@@ -86,7 +86,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>Requirements</Label>
+                            <Label>Requisitos</Label>
                             <Input
                                 type="text"
                                 name="requirements"
@@ -96,7 +96,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>Salary</Label>
+                            <Label>Salário</Label>
                             <Input
                                 type="text"
                                 name="salary"
@@ -106,7 +106,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>Location</Label>
+                            <Label>Localização</Label>
                             <Input
                                 type="text"
                                 name="location"
@@ -116,7 +116,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>Job Type</Label>
+                            <Label>Tipo de Job</Label>
                             <Input
                                 type="text"
                                 name="jobType"
@@ -126,7 +126,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>Experience Level</Label>
+                            <Label>Nível de Experiencia</Label>
                             <Input
                                 type="text"
                                 name="experience"
@@ -136,7 +136,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>No of Postion</Label>
+                            <Label>Nº da Posição</Label>
                             <Input
                                 type="number"
                                 name="position"
@@ -149,7 +149,7 @@ const PostJob = () => {
                             companies.length > 0 && (
                                 <Select onValueChange={selectChangeHandler}>
                                     <SelectTrigger className="w-[180px]">
-                                        <SelectValue placeholder="Select a Company" />
+                                        <SelectValue placeholder="Selecione a Instituição" />
                                     </SelectTrigger>
                                     <SelectContent>
                                         <SelectGroup>
@@ -171,7 +171,7 @@ const PostJob = () => {
                         loading ? <Button className="w-full my-4"> <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait </Button> : <Button type="submit" className="w-full my-4">Post New Job</Button>
                     }
                     {
-                        companies.length === 0 && <p className='text-xs text-red-600 font-bold text-center my-3'>*Please register a company first, before posting a jobs</p>
+                        companies.length === 0 && <p className='text-xs text-red-600 font-bold text-center my-3'>*Por favor primeiro registre a instituição, antes de postar um job</p>
                     }
                 </form>
             </div>

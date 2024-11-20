@@ -24,10 +24,10 @@ const Companies = () => {
                 <div className='flex items-center justify-between my-5'>
                     <Input
                         className="w-fit"
-                        placeholder="Filter by name"
+                        placeholder="Filtrar por nome"
                         onChange={(e) => setInput(e.target.value)}
                     />
-                    <Button onClick={() => navigate("/admin/companies/create")}>New Company</Button>
+                    <Button onClick={() => navigate("/admin/companies/create")}>Cadastrar Instituição</Button>
                 </div>
                 <CompaniesTable/>
             </div>

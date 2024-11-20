@@ -7,7 +7,7 @@ export const applyJob = async (req, res) => {
         const jobId = req.params.id;
         if (!jobId) {
             return res.status(400).json({
-                message: "Job id is required.",
+                message: "O ID do job é obrigatório.",
                 success: false
             })
         };
@@ -16,7 +16,7 @@ export const applyJob = async (req, res) => {
 
         if (existingApplication) {
             return res.status(400).json({
-                message: "You have already applied for this jobs",
+                message: "Você já se candidatou para esse job",
                 success: false
             });
         }
@@ -25,7 +25,7 @@ export const applyJob = async (req, res) => {
         const job = await Job.findById(jobId);
         if (!job) {
             return res.status(404).json({
-                message: "Job not found",
+                message: "Job não encontrado",
                 success: false
             })
         }
@@ -38,7 +38,7 @@ export const applyJob = async (req, res) => {
         job.applications.push(newApplication._id);
         await job.save();
         return res.status(201).json({
-            message:"Job applied successfully.",
+            message:"Sua candidatura ao Job foi enviada.",
             success:true
         })
     } catch (error) {
@@ -58,7 +58,7 @@ export const getAppliedJobs = async (req,res) => {
         });
         if(!application){
             return res.status(404).json({
-                message:"No Applications",
+                message:"Sem candidaturas",
                 success:false
             })
         };
@@ -83,7 +83,7 @@ export const getApplicants = async (req,res) => {
         });
         if(!job){
             return res.status(404).json({
-                message:'Job not found.',
+                message:'Job não encontrado.',
                 success:false
             })
         };
@@ -101,7 +101,7 @@ export const updateStatus = async (req,res) => {
         const applicationId = req.params.id;
         if(!status){
             return res.status(400).json({
-                message:'status is required',
+                message:'O status é obrigatório',
                 success:false
             })
         };
@@ -110,7 +110,7 @@ export const updateStatus = async (req,res) => {
         const application = await Application.findOne({_id:applicationId});
         if(!application){
             return res.status(404).json({
-                message:"Application not found.",
+                message:"Candidatura não encontrada",
                 success:false
             })
         };
@@ -120,7 +120,7 @@ export const updateStatus = async (req,res) => {
         await application.save();
 
         return res.status(200).json({
-            message:"Status updated successfully.",
+            message:"Status atualizado com sucesso!",
             success:true
         });
 
