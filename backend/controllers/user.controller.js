@@ -117,14 +117,14 @@ export const login = async (req, res) => {
     };
 
     return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: true, sameSite: 'strict' }).json({
-      message: `Welcome back ${user.fullname}`,
+      message: `Bem vindo ${user.fullname}`,
       user,
       success: true
     });
   } catch (error) {
     console.log(error);
     return res.status(500).json({
-      message: "Internal Server Error",
+      message: "Error Interno no Servidor",
       success: false
     });
   }
@@ -135,7 +135,7 @@ export const login = async (req, res) => {
 export const logout = async (req, res) => {
     try {
         return res.status(200).cookie("token", "", { maxAge: 0 }).json({
-            message: "Logged out successfully.",
+            message: "Desconectado com sucesso!",
             success: true
         })
     } catch (error) {
@@ -162,7 +162,7 @@ export const updateProfile = async (req, res) => {
 
         if (!user) {
             return res.status(400).json({
-                message: "User not found.",
+                message: "Usuário não encontrado.",
                 success: false
             })
         }
@@ -192,7 +192,7 @@ export const updateProfile = async (req, res) => {
         }
 
         return res.status(200).json({
-            message:"Profile updated successfully.",
+            message:"Perfil atualizado com successo.",
             user,
             success:true
         })

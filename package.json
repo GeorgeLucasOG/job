@@ -1,7 +1,7 @@
 {
   "name": "portaljob",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portal de empregos",
   "main": "index.js",
   "type": "module",
   "scripts": {
