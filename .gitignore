@@ -2,3 +2,6 @@
 id_ed25519 
 id_ed25519.pub
 node_modules
+.env
+admin_25
+admin_25.pub
